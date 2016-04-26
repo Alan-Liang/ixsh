@@ -1,0 +1,136 @@
+﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>我的学生会——提交表格</title>
+<%int rowcount=4;
+String username="梁亚伦";
+%>
+<style>
+body{
+	background:url(../../images/6DB8B17C1C3CF7E0A912A43D5972316C.JPG) #000 fixed center no-repeat;
+}
+.hidden{display:none;}
+h1{
+	font-family:黑体;
+	position: absolute;
+}
+.n:hover{
+	border:1px solid #abcff3;
+	box-shadow:inset 0px 0px 5px #abcff3;
+	height:32px;
+}
+
+.n:focus{
+	border:1px solid #6b9bdc;
+	box-shadow:inset 0px 0px 5px #6b9bdc;
+	height:32px;
+}
+
+.b{
+	height:30px;
+	width:50%;
+}
+.n{
+	height:30px;
+	width:50%;
+}
+.c{
+	height:30px;
+	width:23.333%;
+}
+img{
+	float:left;
+	height:1em;
+}
+input[type="submit"]{
+	height:30px;
+	width:50%;
+	background: -webkit-linear-gradient(left, #3cf , #0f0); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #3cf , #0f0); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #3cf , #0f0); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #3cf , #0f0); /* 标准的语法 */
+}
+#title{
+	color:white;
+	top:0;left:0;right:0;
+	font-size:36px;
+	margin:0;
+	width:100%;
+	background:#000;
+}
+#title{
+	text-align:left;
+}
+@media screen and (min-width: 596px){
+#title{
+	text-align:center;
+}}
+#usertip:hover{
+    background-color: #379960;
+}
+#usertip{
+	float: right;
+	width: auto;
+	height: 30px;
+    background-color: #3fb470;
+    color: #f7f7f7;
+	font-size: 14px;
+    text-align: center;
+	line-height: 30px;
+    cursor:pointer;
+    position: absolute;
+    right: 10px;
+	top:10px;
+	padding: 0px 14px;
+}
+td{
+	width:<%=(100/rowcount)%>%;
+	left:0;right:0;
+	color:white;
+}
+table{
+	top:0;
+	margin-top:81px;
+}
+#firstline td{
+	text-align:center;
+	background:#00C;
+	font-size:24px;
+	font-weight:bold;
+	border-style:dotted;
+	border-width:0px 5px 0px 0px;
+}
+table,tbody,tr{width:100%;}
+td{
+}
+form{color:white;font-size:24px;}
+</style>
+</head>
+<body>
+<script>
+if(history==undefined)history=new Object();
+if(history.pushState==undefined)history.pushState=function(a,b,c){window.open(c);};
+</script>
+<!--[IF IE 5]>
+<script>setTimeout("document.write('您的IE版本过低');",200);</script>
+<![endif-->
+<div id="wrapper">
+<h1 id="title">我的学生会<span id="usertip">欢迎，<%=username%>，<a href="#">退出</a></span></h1>
+<table align="center">
+<tr id="firstline"><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+<tr><td><input class="b n" /></td><td><input class="b n" /></td><td><input class="b n" /></td><td><input class="b n" /></td></tr>
+</table>
+</div>
+<script>
+function gec(a){return document.getElementsByClassName(a);}
+function gei(a){return document.getElementById(a);}
+function ael(a,b,c){a.addEventListener(b,c);}
+window._ops=window.onpopstate;
+window.onpopstate=function(e){
+	window._ops(e);
+};
+</script>
+</body>
+</html>
